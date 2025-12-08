@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Boom, Man, Scissor Lifts & Cherry Picker Rentals – Chennai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      :root {
+        --navy: #050e3c;
+        --deep-blue: #002455;
+        --red-main: #dc0000;
+        --red-light: #ff3838;
+        --bg-page: #ffffff;
+        --bg-white: #ffffff;
+        --bg-blue-soft: #e5efff;
+        --border-soft: #e5e7eb;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+        --radius-lg: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: var(--bg-page);
+        color: var(--text-main);
+        font-size: 1rem;
+      }
+
+      #navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #ffffff;
+      }
+
+      main {
+        margin: 0;
+        padding: 0 0 64px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
+      }
+
+      .section-title {
+        font-size: 1.9rem;
+        margin-bottom: 10px;
+        color: var(--deep-blue);
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 18px;
+      }
+
+      .sections {
+        margin-top: 32px;
+      }
+
+      .section-block {
+        /* margin-bottom: 48px; */
+        padding: 32px 16px;
+      }
+
+      .section-white {
+        background: var(--bg-white);
+      }
+
+      .section-blue {
+        background: var(--bg-blue-soft);
+      }
+
+      .section-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-main);
+        margin-bottom: 18px;
+      }
+
+      .section-text-strong {
+        font-weight: 600;
+      }
+
+      .section-button-wrap {
+        margin-top: 24px;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      /* ========== BUTTONS ========== */
+
+      .btn-on-dark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        border-radius: 999px;
+        border: 1px solid var(--red-main);
+        background: var(--red-main);
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .btn-on-dark:hover {
+        background: #ffffff;
+        color: var(--deep-blue);
+      }
+
+      .btn-on-light {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        border-radius: 999px;
+        border: 1px solid var(--deep-blue);
+        background: #ffffff;
+        color: var(--deep-blue);
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .btn-on-light:hover {
+        background: var(--red-main);
+        color: #ffffff;
+      }
+
+      /* ========== HERO SECTION ========== */
+
+      .hero-wrapper {
+        position: relative;
+        min-height: 80vh;
+        padding: 56px 16px 56px;
+        background: radial-gradient(circle at top left, #111827, #050e3c);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+        gap: 32px;
+        align-items: center;
+      }
+
+      .hero-eyebrow {
+        font-size: 1rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #9ca3af;
+        margin-bottom: 14px;
+      }
+
+      .hero-title {
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #f9fafb;
+      }
+
+      .hero-highlight {
+        color: var(--red-light);
+      }
+
+      .hero-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #e5e7eb;
+        margin-bottom: 22px;
+      }
+
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .hero-badge {
+        padding: 6px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(249, 250, 251, 0.2);
+        font-size: 1rem;
+        color: #e5e7eb;
+        background: rgba(15, 23, 42, 0.6);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+      }
+
+      .hero-note {
+        font-size: 1rem;
+        color: #9ca3af;
+        margin-top: 10px;
+      }
+
+      .hero-image-panel {
+        border-radius: 26px;
+        overflow: hidden;
+        border: 1px solid rgba(249, 250, 251, 0.28);
+        background: #020617;
+        cursor: pointer;
+      }
+
+      .hero-image-panel img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 380px;
+        object-fit: cover;
+      }
+
+      .hero-strip {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        font-size: 1rem;
+      }
+
+      .hero-strip-item {
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(249, 250, 251, 0.18);
+        background: rgba(15, 23, 42, 0.7);
+      }
+
+      /* ========== FLEET: EQUIPMENT TYPES ========== */
+
+      .fleet-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
+        gap: 26px;
+        margin-top: 16px;
+      }
+
+      .fleet-text-block {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-main);
+      }
+
+      .fleet-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .fleet-card {
+        border-radius: 14px;
+        border: 1px solid var(--border-soft);
+        background: #ffffff;
+        padding: 14px 12px;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 10px;
+      }
+
+      .fleet-image-wrap {
+        border-radius: 10px;
+        overflow: hidden;
+        background: #e5e7eb;
+        cursor: pointer;
+      }
+
+      .fleet-image-wrap img {
+        display: block;
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .fleet-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+        margin-bottom: 4px;
+      }
+
+      .fleet-range {
+        font-size: 1rem;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+      }
+
+      .fleet-description {
+        font-size: 1rem;
+        color: var(--text-main);
+      }
+
+      /* ========== USE CASES & PROJECT TYPES ========== */
+
+      .usecases-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 26px;
+        margin-top: 16px;
+      }
+
+      .usecases-list {
+        margin-top: 8px;
+      }
+
+      .usecases-list ul {
+        padding-left: 20px;
+      }
+
+      .usecases-list li {
+        margin-bottom: 6px;
+        font-size: 1rem;
+      }
+
+      .usecases-image-stack {
+        display: grid;
+        gap: 14px;
+      }
+
+      .usecases-image {
+        border-radius: 14px;
+        overflow: hidden;
+        background: #e5e7eb;
+        cursor: pointer;
+      }
+
+      .usecases-image img {
+        display: block;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      /* ========== SERVICE AREAS SECTION ========== */
+
+      .areas-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        gap: 24px;
+        margin-top: 16px;
+      }
+
+      .areas-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .area-tag {
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: #edf2ff;
+        border: 1px solid #c7d2fe;
+        font-size: 1rem;
+        color: var(--deep-blue);
+      }
+
+      .areas-panel {
+        border-radius: 14px;
+        padding: 14px 12px;
+        background-image:
+          linear-gradient(to bottom, rgba(5, 14, 60, 0.75), rgba(5, 14, 60, 0.9)),
+          url("images/outstation-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(248, 250, 252, 0.6);
+        font-size: 1rem;
+        color: #f9fafb;
+      }
+
+      /* ========== SAFETY & SUPPORT ========== */
+
+      .safety-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        gap: 24px;
+        margin-top: 16px;
+      }
+
+      .safety-points {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 18px;
+      }
+
+      .safety-item {
+        display: flex;
+        gap: 10px;
+        font-size: 1rem;
+      }
+
+      .icon-flat {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+        background: #e5efff;
+        border: 1px solid #c7d2fe;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+      }
+
+      .safety-note {
+        border-radius: 14px;
+        padding: 14px 12px;
+        background-image:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75)),
+          url("images/safety-note-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(248, 250, 252, 0.6);
+        font-size: 1rem;
+        color: #f9fafb;
+      }
+
+      /* ========== GALLERY / SNAPSHOTS ========== */
+
+      .gallery-grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .gallery-card {
+        border-radius: 14px;
+        overflow: hidden;
+        background: #e5e7eb;
+        display: grid;
+        grid-template-rows: auto auto;
+        cursor: pointer;
+      }
+
+      .gallery-card img {
+        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+      }
+
+      .gallery-caption {
+        padding: 10px 12px;
+        font-size: 1rem;
+        color: var(--text-main);
+        background: #ffffff;
+        border-top: 1px solid var(--border-soft);
+      }
+
+      /* ========== RENTAL PROCESS ========== */
+
+      .process-grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .process-card {
+        border-radius: 14px;
+        background: #ffffff;
+        border: 1px solid var(--border-soft);
+        padding: 14px 12px;
+        font-size: 1rem;
+      }
+
+      .process-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 6px;
+      }
+
+      .process-step {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+        background: #e5efff;
+        color: var(--deep-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .process-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+      }
+
+      /* ========== FORM OVERLAY (for all clicks) ========== */
+
+      .form-overlay {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+      }
+
+      .form-overlay-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.7);
+      }
+
+      .form-overlay-content {
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        max-height: 90vh;
+        margin: 0 12px;
+        background: #ffffff;
+        border-radius: 18px;
+        overflow: auto;
+      }
+
+      .form-overlay-inner {
+        position: relative;
+      }
+
+      .form-close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        border: none;
+        background: #ffffff;
+        border-radius: 999px;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border: 1px solid var(--border-soft);
+      }
+
+      .form-close:hover {
+        background: var(--red-main);
+        color: #ffffff;
+      }
+
+      /* ========== BOTTOM VISIBLE FORM SECTION ========== */
+
+      .form-bottom-section {
+        background: var(--navy);
+        color: #ffffff;
+        padding: 40px 16px 48px;
+      }
+
+      .form-bottom-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .form-bottom-title {
+        font-size: 1.9rem;
+        margin-bottom: 10px;
+      }
+
+      .form-bottom-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #e5e7eb;
+      }
+
+      /* ========== RESPONSIVE ========== */
+
+      @media (max-width: 960px) {
+        .hero-inner {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero-image-panel {
+          max-width: 460px;
+          margin: 0 auto;
+        }
+
+        .hero-strip {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .fleet-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .usecases-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .areas-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .safety-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .process-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .section-block {
+          padding: 24px 12px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .process-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .safety-points {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <!-- HERO SECTION (full-width) -->
+    <header class="hero-wrapper">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-eyebrow">
+            Access Equipment Rentals · Chennai
+          </div>
+          <h1 class="hero-title">
+            <span class="hero-highlight">Boom lifts</span>,
+            <span class="hero-highlight">Man lifts</span>,
+            <span class="hero-highlight">Scissor lifts</span> &
+            <span class="hero-highlight">Cherry pickers</span>
+            for Chennai projects.
+          </h1>
+          <p class="hero-text">
+            A dedicated fleet of access platforms for construction, maintenance
+            and industrial work in and around Chennai. Share your height,
+            duration and site access – we’ll suggest the right machine and
+            respond with a clear rental proposal.
+          </p>
+
+          <div class="hero-badges">
+            <div class="hero-badge">Short-term & long-term rentals</div>
+            <div class="hero-badge">Operator or bare rental options</div>
+            <div class="hero-badge">Planned delivery windows</div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn-on-dark" onclick="openForm()">
+              CLICK HERE to start your Chennai enquiry
+            </button>
+          </div>
+
+          <div class="hero-note">
+            Site drawings or photos help us refine the suggestion, but a simple
+            description is enough to begin.
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-image-panel" onclick="openForm()">
+            <img
+              src="images/chennai-hero-lift.jpg"
+              alt="Access equipment rental in Chennai"
+            />
+          </div>
+
+          <div class="hero-strip">
+            <div class="hero-strip-item">
+              Industrial corridors – Sriperumbudur, Oragadam, Gummidipoondi.
+            </div>
+            <div class="hero-strip-item">
+              IT parks, offices and malls along OMR, Guindy and central areas.
+            </div>
+            <div class="hero-strip-item">
+              Ports, roads and signage jobs supported using cherry pickers.
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="sections">
+        <!-- SECTION 1: FLEET (WHITE, FULL-WIDTH BG) -->
+        <section class="section-block section-white">
+          <div class="section-inner">
+            <div class="section-subtitle">
+              Our fleet
+            </div>
+            <h2 class="section-title">
+              Equipment for different height and access conditions
+            </h2>
+
+            <p class="section-text">
+              Our Chennai fleet is built around four core categories – boom lifts,
+              man lifts, scissor lifts and cherry pickers. Each is suited for
+              specific situations: tight indoors, rough outdoor ground, long
+              outreach or frequent movement between work spots.
+            </p>
+
+            <div class="fleet-layout">
+              <div class="fleet-text-block">
+                <p class="section-text">
+                  Use boom lifts when you need to reach over obstacles or work
+                  along façades. They combine vertical height with horizontal
+                  reach, making them ideal for structure work, piping and
+                  external fit-out activities.
+                </p>
+                <p class="section-text">
+                  Man lifts and scissor lifts are typically used indoors or on
+                  finished surfaces where controlled movement and compact
+                  footprints matter. Cherry pickers help your team move quickly
+                  between poles, signs or lights along roads or within large
+                  campuses.
+                </p>
+                <p class="section-text">
+                  Share the working height, ground condition and whether your
+                  job is indoors or outdoors. We’ll narrow the options down to a
+                  safe, practical choice for your site.
+                </p>
+
+                <div class="section-button-wrap">
+                  <button class="btn-on-light" onclick="openForm()">
+                    CLICK HERE to view suitable equipment
+                  </button>
+                </div>
+              </div>
+
+              <div class="fleet-grid">
+                <article class="fleet-card">
+                  <div class="fleet-image-wrap" onclick="openForm()">
+                    <img
+                      src="images/fleet-boomlift.jpg"
+                      alt="Boom lifts for Chennai rental"
+                    />
+                  </div>
+                  <div>
+                    <div class="fleet-title">Boom lifts</div>
+                    <div class="fleet-range">
+                      Straight & articulating booms with extended outreach.
+                    </div>
+                    <div class="fleet-description">
+                      Used for façade activities, pipe routing, structure
+                      erection and outdoor maintenance where you need both reach
+                      and height.
+                    </div>
+                  </div>
+                </article>
+
+                <article class="fleet-card">
+                  <div class="fleet-image-wrap" onclick="openForm()">
+                    <img
+                      src="images/fleet-manlift.jpg"
+                      alt="Compact manlift platforms"
+                    />
+                  </div>
+                  <div>
+                    <div class="fleet-title">Man lifts</div>
+                    <div class="fleet-range">
+                      Compact access options for confined indoor spaces.
+                    </div>
+                    <div class="fleet-description">
+                      Suited for one-person tasks in corridors, plant rooms and
+                      between equipment lines where larger machines cannot be
+                      positioned.
+                    </div>
+                  </div>
+                </article>
+
+                <article class="fleet-card">
+                  <div class="fleet-image-wrap" onclick="openForm()">
+                    <img
+                      src="images/fleet-scissorlift.jpg"
+                      alt="Scissor lifts for indoor work"
+                    />
+                  </div>
+                  <div>
+                    <div class="fleet-title">Scissor lifts</div>
+                    <div class="fleet-range">
+                      Electric & diesel models for smooth or rough floors.
+                    </div>
+                    <div class="fleet-description">
+                      Provide a stable platform for MEP, electrical, HVAC and
+                      ceiling work in warehouses, IT buildings and industrial
+                      sheds.
+                    </div>
+                  </div>
+                </article>
+
+                <article class="fleet-card">
+                  <div class="fleet-image-wrap" onclick="openForm()">
+                    <img
+                      src="images/fleet-cherry-picker.jpg"
+                      alt="Cherry picker rental Chennai"
+                    />
+                  </div>
+                  <div>
+                    <div class="fleet-title">Cherry pickers</div>
+                    <div class="fleet-range">
+                      Truck-mounted units for mobile roadside jobs.
+                    </div>
+                    <div class="fleet-description">
+                      Ideal for street lighting, hoardings, façade cleaning and
+                      other tasks where you move between multiple work points.
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: USE CASES (BLUE, FULL-WIDTH BG) -->
+        <section class="section-block section-blue">
+          <div class="section-inner">
+            <div class="section-subtitle">
+              Project applications
+            </div>
+            <h2 class="section-title">
+              Typical work where our lifts are deployed
+            </h2>
+
+            <div class="usecases-layout">
+              <div>
+                <p class="section-text">
+                  Our boom lifts, man lifts, scissor lifts and cherry pickers
+                  support a wide variety of project types – from new
+                  construction to recurring maintenance across Chennai. Every
+                  site has its own constraints: limited hours, tight aisles or
+                  sensitive finished surfaces.
+                </p>
+
+                <div class="usecases-list">
+                  <ul>
+                    <li>
+                      Interior fit-out and services work in IT parks and office
+                      buildings.
+                    </li>
+                    <li>
+                      Factory and OEM plant shutdown activities at height in
+                      production areas.
+                    </li>
+                    <li>
+                      Warehouse racking, sprinkler, cable tray and lighting
+                      installation.
+                    </li>
+                    <li>
+                      Façade cleaning, glazing, cladding and signage installation.
+                    </li>
+                    <li>
+                      Street lighting, banners and hoardings along city roads
+                      and highways.
+                    </li>
+                  </ul>
+                </div>
+
+                <p class="section-text">
+                  A small description of your job is enough for us to reply with
+                  a suggested lift type, likely rental duration and an initial
+                  commercial direction.
+                </p>
+
+                <div class="section-button-wrap">
+                  <button class="btn-on-light" onclick="openForm()">
+                    CLICK HERE to match a lift to your work
+                  </button>
+                </div>
+              </div>
+
+              <div class="usecases-image-stack">
+                <div class="usecases-image" onclick="openForm()">
+                  <img
+                    src="images/usecase-indoor.jpg"
+                    alt="Indoor application with scissor lift"
+                  />
+                </div>
+                <div class="usecases-image" onclick="openForm()">
+                  <img
+                    src="images/usecase-outdoor.jpg"
+                    alt="Outdoor application with boom lift"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: SERVICE AREAS (WHITE, FULL-WIDTH BG) -->
+        <section class="section-block section-white">
+          <div class="section-inner">
+            <div class="section-subtitle">
+              Service areas
+            </div>
+            <h2 class="section-title">
+              Chennai locations and industrial belts we support
+            </h2>
+
+            <div class="areas-layout">
+              <div>
+                <p class="section-text">
+                  We routinely mobilise equipment to core city areas, IT belts
+                  and industrial corridors in and around Chennai. Planning
+                  begins with your site location, the entry route and preferred
+                  reporting time.
+                </p>
+                <p class="section-text">
+                  Our team coordinates with your site lead on gate passes,
+                  parking or staging areas and basic rules, so that machines can
+                  start work quickly after arrival and safety checks.
+                </p>
+
+                <div class="areas-tags">
+                  <span class="area-tag">OMR & ECR IT corridors</span>
+                  <span class="area-tag">Guindy & Ekkatuthangal</span>
+                  <span class="area-tag">Ambattur & Padi</span>
+                  <span class="area-tag">Sriperumbudur</span>
+                  <span class="area-tag">Oragadam</span>
+                  <span class="area-tag">Ennore & port zones</span>
+                  <span class="area-tag">Gummidipoondi cluster</span>
+                </div>
+
+                <div class="section-button-wrap" style="margin-top:28px;">
+                  <button class="btn-on-light" onclick="openForm()">
+                    CLICK HERE to check your site coverage
+                  </button>
+                </div>
+              </div>
+
+              <aside class="areas-panel">
+                <p>
+                  <span class="section-text-strong">Outstation jobs:</span>
+                  for projects outside Chennai, we review distance, travel time
+                  and expected duration before confirming feasibility. Where it
+                  is practical, we propose a mobilisation plan including
+                  reporting time and expected demobilisation date.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: SAFETY & SUPPORT (BLUE, FULL-WIDTH BG) -->
+        <section class="section-block section-blue">
+          <div class="section-inner">
+            <div class="section-subtitle">
+              Safety & support
+            </div>
+            <h2 class="section-title">
+              Preparing machines for safe, reliable work on site
+            </h2>
+
+            <div class="safety-layout">
+              <div>
+                <p class="section-text">
+                  Before dispatch, we run checks on controls, hydraulics,
+                  emergency systems and visible components. Operators and site
+                  teams are briefed on basic operating limits, surface
+                  requirements and safe working practices.
+                </p>
+                <p class="section-text">
+                  For multi-week jobs, we can schedule periodic visits or calls
+                  to review machine condition and clarify any operating
+                  questions that your team may have.
+                </p>
+
+                <div class="safety-points">
+                  <div class="safety-item">
+                    <div class="icon-flat">🛠️</div>
+                    <div>
+                      Pre-dispatch inspections that help reduce unplanned
+                      stoppages and keep work moving.
+                    </div>
+                  </div>
+                  <div class="safety-item">
+                    <div class="icon-flat">📄</div>
+                    <div>
+                      Basic equipment data that can be shared with your safety,
+                      admin or project documentation teams.
+                    </div>
+                  </div>
+                  <div class="safety-item">
+                    <div class="icon-flat">👷</div>
+                    <div>
+                      Operators who are familiar with industrial premises, gate
+                      procedures and safety inductions.
+                    </div>
+                  </div>
+                  <div class="safety-item">
+                    <div class="icon-flat">☎️</div>
+                    <div>
+                      Phone support during working hours for operating queries or
+                      minor issues on active rental sites.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-button-wrap" style="margin-top:26px;">
+                  <button class="btn-on-light" onclick="openForm()">
+                    CLICK HERE to discuss safety & support
+                  </button>
+                </div>
+              </div>
+
+              <aside class="safety-note">
+                <p>
+                  If your organisation follows specific safety checklists,
+                  toolbox talks or induction formats, share them when you send
+                  an enquiry. Wherever possible, we align our dispatch and
+                  operator instructions with your internal procedures so the
+                  equipment fits smoothly into your safety framework.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5: GALLERY / SNAPSHOTS (WHITE, FULL-WIDTH BG) -->
+        <section class="section-block section-white">
+          <div class="section-inner">
+            <div class="section-subtitle">
+              Site snapshots
+            </div>
+            <h2 class="section-title">
+              Examples of how lifts are used in the field
+            </h2>
+
+            <p class="section-text">
+              These images show typical ways access platforms are deployed in
+              real projects – helping replace temporary scaffolding for many
+              activities and improving movement, safety and timelines on site.
+            </p>
+
+            <div class="gallery-grid">
+              <article class="gallery-card" onclick="openForm()">
+                <img
+                  src="images/gallery-warehouse.jpg"
+                  alt="Scissor lifts working in a warehouse"
+                />
+                <div class="gallery-caption">
+                  Scissor lifts used for racking, sprinklers and high-bay
+                  lighting work within a multi-bay warehouse.
+                </div>
+              </article>
+
+              <article class="gallery-card" onclick="openForm()">
+                <img
+                  src="images/gallery-facade.jpg"
+                  alt="Boom lift on commercial building façade"
+                />
+                <div class="gallery-caption">
+                  Boom lift supporting façade, glazing and external service work
+                  on a commercial building in the city.
+                </div>
+              </article>
+
+              <article class="gallery-card" onclick="openForm()">
+                <img
+                  src="images/gallery-roadside.jpg"
+                  alt="Cherry picker used along a city road"
+                />
+                <div class="gallery-caption">
+                  Cherry picker handling street lighting and hoarding maintenance
+                  along a busy traffic corridor.
+                </div>
+              </article>
+            </div>
+
+            <div class="section-button-wrap" style="margin-top:30px;">
+              <button class="btn-on-light" onclick="openForm()">
+                CLICK HERE to plan a similar deployment
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 6: RENTAL PROCESS (BLUE, FULL-WIDTH BG) -->
+        <section class="section-block section-blue">
+          <div class="section-inner">
+            <div class="section-subtitle">
+              Rental flow
+            </div>
+            <h2 class="section-title">
+              Simple steps from first enquiry to demobilisation
+            </h2>
+
+            <p class="section-text">
+              A straightforward process helps everyone stay aligned – your
+              planning team, site supervisors and our dispatch crew. Here is how
+              a typical rental moves from first contact to machine demobilisation.
+            </p>
+
+            <div class="process-grid">
+              <article class="process-card">
+                <div class="process-header">
+                  <div class="process-step">1</div>
+                  <div class="process-title">Share your site details</div>
+                </div>
+                <p>
+                  Send location, approximate working height, job description,
+                  floor conditions and tentative dates for your Chennai project.
+                </p>
+              </article>
+
+              <article class="process-card">
+                <div class="process-header">
+                  <div class="process-step">2</div>
+                  <div class="process-title">We suggest options</div>
+                </div>
+                <p>
+                  Based on the information, we recommend boom lifts, man lifts,
+                  scissor lifts or cherry pickers along with a rental structure.
+                </p>
+              </article>
+
+              <article class="process-card">
+                <div class="process-header">
+                  <div class="process-step">3</div>
+                  <div class="process-title">Confirm & schedule</div>
+                </div>
+                <p>
+                  Once you approve, we confirm availability, reserve the
+                  equipment and share a proposed reporting time with any
+                  pre-arrival requirements.
+                </p>
+              </article>
+
+              <article class="process-card">
+                <div class="process-header">
+                  <div class="process-step">4</div>
+                  <div class="process-title">Machine reporting</div>
+                </div>
+                <p>
+                  Equipment reaches site, basic checks are done and work begins.
+                  During the rental, our team stays available for operating
+                  queries or support.
+                </p>
+              </article>
+            </div>
+
+            <div class="section-button-wrap" style="margin-top:30px;">
+              <button class="btn-on-light" onclick="openForm()">
+                CLICK HERE to begin your rental process
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- BOTTOM VISIBLE FORM SECTION (FULL BLUE) -->
+    <section class="form-bottom-section">
+      <div class="form-bottom-inner">
+        <h2 class="form-bottom-title">
+          Enquiry form for boom lifts, man lifts, scissor lifts & cherry pickers
+        </h2>
+        <p class="form-bottom-subtitle">
+          Fill in your Chennai requirement below. Our team will review the
+          details and respond with a suitable equipment suggestion and rental
+          plan.
+        </p>
+
+        <!-- Visible embedded form from form.html -->
+        <div id="form-bottom-inner"></div>
+      </div>
+    </section>
+
+    <!-- FORM OVERLAY (for buttons & images) -->
+    <div id="form-overlay" class="form-overlay">
+      <div class="form-overlay-backdrop" onclick="closeForm()"></div>
+      <div class="form-overlay-content">
+        <div class="form-overlay-inner">
+          <button class="form-close" type="button" onclick="closeForm()">
+            ×
+          </button>
+          <div id="form-inner">
+            <!-- form.html will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function loadFragment(targetId, url) {
+        var container = document.getElementById(targetId);
+        if (!container) return;
+
+        fetch(url)
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (html) {
+            container.innerHTML = html;
+          })
+          .catch(function (error) {
+            console.error("Error loading fragment:", url, error);
+          });
+      }
+
+      // Load navbar + footer fragments
+      loadFragment("navbar", "navbar.html");
+      loadFragment("footer", "footer.html");
+
+      // Load visible bottom form
+      loadFragment("form-bottom-inner", "form.html");
+
+      var formLoaded = false;
+
+      function openForm() {
+        var overlay = document.getElementById("form-overlay");
+        var inner = document.getElementById("form-inner");
+
+        if (!formLoaded) {
+          fetch("form.html")
+            .then(function (response) {
+              return response.text();
+            })
+            .then(function (html) {
+              inner.innerHTML = html;
+              formLoaded = true;
+              overlay.style.display = "flex";
+            })
+            .catch(function (error) {
+              console.error("Error loading form.html:", error);
+            });
+        } else {
+          overlay.style.display = "flex";
+        }
+      }
+
+      function closeForm() {
+        var overlay = document.getElementById("form-overlay");
+        overlay.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact – Chennai Lift Rentals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* Design tokens (same palette as other pages) */
+    :root{
+      --navy:#050e3c;
+      --deep-blue:#002455;
+      --red-main:#dc0000;
+      --red-light:#ff3838;
+      --bg-blue-soft:#e5efff;
+      --bg-white:#ffffff;
+      --border-soft:#d1d5db;
+      --text-main:#111827;
+      --text-muted:#6b7280;
+      --radius-lg:14px;
+      --btn-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;font-family:var(--btn-font-family);-webkit-font-smoothing:antialiased;}
+    body{background:var(--bg-white);color:var(--text-main);line-height:1.6;}
+
+    /* NAVBAR placeholder (fragment loaded into this div) */
+    #navbar{position:sticky;top:0;z-index:1000;background:var(--bg-white);}
+
+    /* Section bands (full-width) */
+    .band{width:100%;padding:48px 16px;}
+    .band-inner{max-width:1200px;margin:0 auto;}
+    .band-white{background:var(--bg-white);}
+    .band-blue{background:var(--bg-blue-soft);}
+    .band-dark{background: radial-gradient(circle at top left,#111827,#050e3c); color:#fff;}
+
+    .eyebrow{font-size:0.95rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--red-main);margin-bottom:8px;}
+    .band-dark .eyebrow{color:#e5e7eb;}
+
+    h1,h2{margin:0 0 12px 0;}
+    .hero-title{font-size:1.9rem;font-weight:700;color:#fff;margin-bottom:6px;}
+    .hero-sub{color:#e5e7eb;max-width:760px;font-size:1rem;}
+
+    /* BUTTONS - match exact look & font of other pages */
+    .btn {
+      font-family: var(--btn-font-family);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 12px 22px;
+      border-radius: 999px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+    }
+
+    .btn-on-light {
+      background: #ffffff;
+      color: var(--deep-blue);
+      border-color: var(--deep-blue);
+    }
+    .btn-on-light:hover {
+      background: var(--red-main);
+      color: #ffffff;
+    }
+
+    .btn-on-dark {
+      background: var(--red-main);
+      color: #fff;
+      border-color: var(--red-main);
+    }
+    .btn-on-dark:hover {
+      background: #fff;
+      color: var(--deep-blue);
+    }
+
+    /* Card / layout helpers */
+    .card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+    }
+
+    /* FAQ items */
+    .faq-list{display:grid;gap:18px;margin-top:8px;}
+    .faq-item{padding:18px;border-radius:12px;border:1px solid var(--border-soft);background:#fff;}
+    .faq-q{font-size:1.08rem;font-weight:700;color:var(--deep-blue);margin-bottom:8px;}
+    .faq-a{color:var(--text-main);margin:0 0 10px 0;}
+
+    /* Coverage rows */
+    .coverage-grid{display:grid;gap:14px;margin-top:12px;}
+    .coverage-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;border-radius:12px;background:#fff;border:1px solid var(--border-soft);}
+    .coverage-left{max-width:72%;}
+    .coverage-title{font-weight:700;color:var(--deep-blue);margin-bottom:4px;}
+    .coverage-sub{color:var(--text-muted);font-size:0.98rem;margin:0;}
+
+    /* Urgent */
+    .urgent {padding:18px;border-radius:12px;background:#fff;border:1px solid var(--border-soft);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+    .urgent .left {min-width:180px;}
+    .urgent-number{font-weight:800;font-size:1.4rem;color:var(--red-main);}
+
+    /* Bottom CTA trio (single-line row on wide screens) */
+    .cta-row {
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:center;
+      margin-top:18px;
+      flex-wrap:wrap;
+    }
+    /* force exactly 3 items inline on wide screens */
+    @media (min-width:860px){
+      .cta-row { justify-content:flex-start; }
+      .cta-row .cta { flex: 0 0 auto; }
+    }
+    @media (max-width:859px){
+      .cta-row { justify-content:center; }
+    }
+
+    /* bottom form band */
+    .form-bottom{
+      background:var(--navy);
+      color:#fff;
+      padding:48px 16px;
+    }
+    .form-bottom-inner{max-width:1200px;margin:0 auto;}
+
+    /* overlay form */
+    .form-overlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:2200;}
+    .form-backdrop{position:absolute;inset:0;background:rgba(15,23,42,0.7);}
+    .form-container{position:relative;background:#fff;border-radius:18px;max-width:1100px;width:100%;max-height:90vh;overflow:auto;border:1px solid var(--border-soft);}
+    .form-close{position:absolute;right:12px;top:12px;background:#fff;border-radius:999px;border:1px solid var(--border-soft);width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+    .form-close:hover{background:var(--red-main);color:#fff;}
+
+    /* small screens */
+    @media (max-width:640px){
+      .band{padding:28px 12px;}
+      .coverage-left{max-width:100%;}
+      .cta-row{flex-direction:column;align-items:stretch;}
+      .cta-row .btn{width:100%;}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar fragment -->
+  <div id="navbar"></div>
+
+  <!-- HERO -->
+  <section class="band band-dark">
+    <div class="band-inner">
+      <div class="eyebrow">Contact</div>
+      <h1 class="hero-title">We’re ready to help — enquiries & urgent support</h1>
+      <p class="hero-sub">Use the quick actions below or open the enquiry form to share site details. All CTAs open the same popup form so you can attach photos and send specifics.</p>
+      <div style="margin-top:18px;">
+        <button class="btn btn-on-dark" onclick="openForm()">Send an enquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (full-width white) -->
+  <section class="band band-white">
+    <div class="band-inner">
+      <div class="eyebrow">FAQ</div>
+      <h2 style="color:var(--deep-blue);margin-bottom:6px;">Common contact questions</h2>
+      <p style="color:var(--text-muted);margin-top:0;margin-bottom:12px;">Fast answers to frequent queries — use the button on any item to open the enquiry form with context.</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">How quickly can you mobilise a machine?</div>
+          <p class="faq-a">City jobs typically 24–48 hours depending on availability; industrial belts may take longer due to travel and gate procedures.</p>
+          <div class="cta-row" style="justify-content:flex-start;">
+            <button class="btn btn-on-light" onclick="openForm()">Check mobilisation</button>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Do you provide operators or bare machines?</div>
+          <p class="faq-a">Both options are available. Select operator-assisted if your team needs certified personnel; otherwise choose bare rental if site allows.</p>
+          <div class="cta-row" style="justify-content:flex-start;">
+            <button class="btn btn-on-light" onclick="openForm()">Operator options</button>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What should I include in an enquiry?</div>
+          <p class="faq-a">Site location, approximate working height, ground type (finished / rough / slope), indoor/outdoor, preferred dates and any photos/drawings.</p>
+          <div class="cta-row" style="justify-content:flex-start;">
+            <button class="btn btn-on-light" onclick="openForm()">Share site details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coverage (full-width blue) -->
+  <section class="band band-blue">
+    <div class="band-inner">
+      <div class="eyebrow">Coverage</div>
+      <h2 style="color:var(--deep-blue);margin-bottom:6px;">Chennai service area & mobilisation notes</h2>
+      <p style="color:var(--text-muted);margin-top:0;margin-bottom:12px;">We mobilise to city, IT corridors and nearby industrial belts — planning includes travel time, staging and permits where required.</p>
+
+      <div class="coverage-grid">
+        <div class="coverage-row">
+          <div class="coverage-left">
+            <div class="coverage-title">City & IT corridors</div>
+            <div class="coverage-sub">OMR, ECR, Guindy, Central Chennai — often same-day mobilisation when available.</div>
+          </div>
+          <div>
+            <button class="btn btn-on-light" onclick="openForm()">Check coverage</button>
+          </div>
+        </div>
+
+        <div class="coverage-row">
+          <div class="coverage-left">
+            <div class="coverage-title">Industrial belts</div>
+            <div class="coverage-sub">Sriperumbudur, Oragadam, Ambattur — allow for travel and gate procedures.</div>
+          </div>
+          <div>
+            <button class="btn btn-on-light" onclick="openForm()">Request mobilisation plan</button>
+          </div>
+        </div>
+
+        <div class="coverage-row">
+          <div class="coverage-left">
+            <div class="coverage-title">Ports & roadside</div>
+            <div class="coverage-sub">Ennore, port areas and highways — some permits may be required; plan early.</div>
+          </div>
+          <div>
+            <button class="btn btn-on-light" onclick="openForm()">Permit guidance</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Urgent (full-width white) -->
+  <section class="band band-white">
+    <div class="band-inner">
+      <div class="eyebrow">Urgent</div>
+      <h2 style="color:var(--deep-blue);margin-bottom:6px;">Urgent or active-site issues</h2>
+      <p style="color:var(--text-muted);margin-top:0;margin-bottom:12px;">For operational problems on active rentals, use the hotline or open the form and mark the enquiry urgent.</p>
+
+      <div class="urgent">
+        <div class="left">
+          <div style="font-weight:700;color:var(--deep-blue);">Operational hotline</div>
+          <div class="urgent-number">+91 99 0000 0000</div>
+          <div style="color:var(--text-muted);margin-top:6px;">Mon–Sat 07:30–20:00 — call for on-site operational issues.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
+          <a href="tel:+919900000000" class="btn btn-on-light" style="text-decoration:none;">Call hotline</a>
+          <button class="btn btn-on-dark" onclick="openForm()">Report urgent issue</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA row (three in single line on wide screens) -->
+  <section class="band band-white" aria-label="Quick actions">
+    <div class="band-inner">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <div>
+          <h2 style="color:var(--deep-blue);margin:0 0 6px;">Quick actions</h2>
+          <p style="color:var(--text-muted);margin:0;">Pick a quick action to start — all open the enquiry form with context.</p>
+        </div>
+
+        <div class="cta-row" style="margin-left:auto;">
+          <button class="btn btn-on-light cta" onclick="openForm()">Send enquiry</button>
+          <a href="tel:+919900000000" class="btn btn-on-light cta" style="text-decoration:none;">Call us</a>
+          <a href="mailto:info@accessequipchennai.example" class="btn btn-on-light cta" style="text-decoration:none;">Email us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom embedded form (full-width navy) -->
+  <section class="form-bottom">
+    <div class="form-bottom-inner">
+      <h2 style="margin:0 0 8px;color:#fff;">Send your contact enquiry</h2>
+      <p style="margin:0 0 16px;color:#e5e7eb;">Share your requirement and our team will respond with machine suggestions and mobilisation notes.</p>
+
+      <!-- three compact action buttons above the embedded form (keeps parity with the CTA row) -->
+      <div style="display:flex;gap:12px;margin-bottom:18px;flex-wrap:wrap;">
+        <button class="btn btn-on-dark" onclick="openForm()">Open enquiry form</button>
+        <a href="tel:+919900000000" class="btn btn-on-light" style="text-decoration:none;">Call +91 99 0000 0000</a>
+        <a href="mailto:info@accessequipchennai.example" class="btn btn-on-light" style="text-decoration:none;">Email info@accessequipchennai.example</a>
+      </div>
+
+      <div id="form-bottom-inner"></div>
+    </div>
+  </section>
+
+  <!-- footer fragment -->
+  <div id="footer"></div>
+
+  <!-- Overlay form (shared) -->
+  <div id="form-overlay" class="form-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="form-backdrop" onclick="closeForm()"></div>
+    <div class="form-container" role="document" aria-label="Enquiry form">
+      <button class="form-close" aria-label="Close form" onclick="closeForm()">×</button>
+      <div id="form-inner"></div>
+    </div>
+  </div>
+
+  <script>
+    // Load fragments
+    function loadFragment(targetId, url){
+      var el = document.getElementById(targetId);
+      if (!el) return;
+      fetch(url).then(function(r){ return r.text(); }).then(function(html){
+        el.innerHTML = html;
+      }).catch(function(err){
+        console.error("Error loading " + url, err);
+      });
+    }
+
+    loadFragment("navbar","navbar.html");
+    loadFragment("footer","footer.html");
+    loadFragment("form-bottom-inner","form.html");
+
+    // overlay form logic (keeps state – load only once)
+    var formLoaded = false;
+    function openForm(){
+      var overlay = document.getElementById('form-overlay');
+      var inner = document.getElementById('form-inner');
+      overlay.style.display = 'flex';
+      overlay.setAttribute('aria-hidden','false');
+      if (!formLoaded) {
+        fetch('form.html').then(function(r){ return r.text(); }).then(function(html){
+          inner.innerHTML = html;
+          formLoaded = true;
+          // focus first input
+          setTimeout(function(){
+            var first = inner.querySelector('input, textarea, button');
+            if (first) first.focus();
+          }, 120);
+        }).catch(function(err){
+          console.error("Error loading form fragment:", err);
+        });
+      } else {
+        // form already loaded; just focus
+        setTimeout(function(){
+          var first = inner.querySelector('input, textarea, button');
+          if (first) first.focus();
+        }, 120);
+      }
+    }
+
+    function closeForm(){
+      var overlay = document.getElementById('form-overlay');
+      overlay.style.display = 'none';
+      overlay.setAttribute('aria-hidden','true');
+    }
+
+    // close with ESC
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeForm();
+    });
+  </script>
+</body>
+</html>

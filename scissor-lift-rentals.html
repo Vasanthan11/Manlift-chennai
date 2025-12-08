@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scissor Lift Rentals in Chennai – Indoor & Outdoor Platforms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      :root {
+        --navy: #050e3c;
+        --deep-blue: #002455;
+        --red-main: #dc0000;
+        --red-light: #ff3838;
+        --bg-page: #ffffff;
+        --bg-white: #ffffff;
+        --bg-blue-soft: #e5efff;
+        --border-soft: #d1d5db;
+        --text-main: #111827;
+        --text-muted: #4b5563;
+        --radius-lg: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: var(--bg-page);
+        color: var(--text-main);
+        font-size: 1rem;
+      }
+
+      #navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #ffffff;
+      }
+
+      main {
+        margin: 0;
+        padding: 0 0 64px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
+      }
+
+      .page-shell {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .section-eyebrow {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--red-main);
+        margin-bottom: 0.6rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--deep-blue);
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+        color: var(--text-muted);
+      }
+
+      .section-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-main);
+      }
+
+      /* FULL-WIDTH BANDS */
+
+      .band {
+        width: 100%;
+        padding: 40px 0;
+      }
+
+      .band-dark {
+        background: radial-gradient(circle at top left, #111827, #050e3c);
+        color: #ffffff;
+      }
+
+      .band-white {
+        background: var(--bg-white);
+      }
+
+      .band-blue {
+        background: var(--bg-blue-soft);
+      }
+
+      /* BUTTONS */
+
+      /* On dark background */
+      .btn-on-dark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        border-radius: 999px;
+        border: 1px solid var(--red-main);
+        background: var(--red-main);
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.18s ease, color 0.18s ease;
+      }
+
+      .btn-on-dark:hover {
+        background: #ffffff;
+        color: var(--deep-blue);
+      }
+
+      /* On light / white / blue background */
+      .btn-on-light {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        border-radius: 999px;
+        border: 1px solid var(--deep-blue);
+        background: #ffffff;
+        color: var(--deep-blue);
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.18s ease, color 0.18s ease;
+      }
+
+      .btn-on-light:hover {
+        background: var(--red-main);
+        color: #ffffff;
+      }
+
+      /* HERO */
+
+      .scissor-hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .scissor-hero-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+        gap: 32px;
+        align-items: center;
+      }
+
+      .hero-breadcrumbs {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+        color: #e5e7eb;
+      }
+
+      .hero-breadcrumbs a {
+        color: #e5e7eb;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .band-dark .section-eyebrow {
+        color: #e5e7eb;
+      }
+
+      .band-dark .section-title {
+        color: #ffffff;
+      }
+
+      .band-dark .section-subtitle {
+        color: #d1d5db;
+      }
+
+      .hero-title-highlight {
+        color: var(--red-light);
+      }
+
+      .hero-strip {
+        margin: 1.2rem 0 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .hero-pill {
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(249, 250, 251, 0.4);
+        font-size: 1rem;
+        background: rgba(15, 23, 42, 0.7);
+        color: #e5e7eb;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem 1.4rem;
+        font-size: 1rem;
+        color: #e5e7eb;
+      }
+
+      .hero-grid strong {
+        display: block;
+        color: #ffffff;
+        margin-bottom: 0.2rem;
+      }
+
+      .hero-actions {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+      }
+
+      .hero-note {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: #e5e7eb;
+      }
+
+      .hero-image-card {
+        border-radius: 26px;
+        padding: 10px;
+        border: 1px solid rgba(249, 250, 251, 0.4);
+        background: #020617;
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7);
+        position: relative;
+      }
+
+      .hero-image-main {
+        border-radius: 20px;
+        overflow: hidden;
+        height: 560px;
+        cursor: pointer;
+      }
+
+      .hero-image-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .hero-label {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(220, 0, 0, 0.92);
+        color: #ffffff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+      }
+
+      .hero-image-meta {
+        margin-top: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 1rem;
+        color: #e5e7eb;
+      }
+
+      /* SECTION: WHERE SCISSORS FIT */
+
+      .fit-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 28px;
+        margin-top: 18px;
+        align-items: flex-start;
+      }
+
+      .fit-text p + p {
+        margin-top: 0.8rem;
+      }
+
+      .fit-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .fit-card {
+        border-radius: 16px;
+        border: 1px solid var(--border-soft);
+        background: #ffffff;
+        padding: 14px 12px 16px;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+        display: grid;
+        gap: 8px;
+      }
+
+      .fit-tag {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--deep-blue);
+      }
+
+      .fit-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+      }
+
+      .fit-note {
+        font-size: 1rem;
+        color: var(--text-muted);
+      }
+
+      /* SECTION: INDOOR SCISSORS (BLUE BAND) */
+
+      .indoor-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        gap: 28px;
+        margin-top: 18px;
+      }
+
+      .image-stack {
+        display: grid;
+        gap: 12px;
+      }
+
+      .image-box {
+        border-radius: 16px;
+        overflow: hidden;
+        background: #e5e7eb;
+        height: 180px;
+        cursor: pointer;
+      }
+
+      .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* SECTION: OUTDOOR / RT SCISSORS (WHITE BAND) */
+
+      .outdoor-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        gap: 28px;
+        margin-top: 18px;
+        align-items: center;
+      }
+
+      .outdoor-panel {
+        border-radius: 18px;
+        padding: 16px 14px;
+        background-image:
+          linear-gradient(to bottom, rgba(5, 14, 60, 0.85), rgba(0, 0, 0, 0.9)),
+          url("images/scissor-rough-terrain-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(15, 23, 42, 0.7);
+        color: #f9fafb;
+        font-size: 1rem;
+      }
+
+      .outdoor-panel strong {
+        display: block;
+        margin-bottom: 0.4rem;
+      }
+
+      /* SECTION: PLATFORM OPTIONS (BLUE BAND) */
+
+      .platform-grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .platform-card {
+        border-radius: 16px;
+        border: 1px solid var(--border-soft);
+        background: #ffffff;
+        padding: 14px 12px 16px;
+        font-size: 1rem;
+      }
+
+      .platform-range {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--deep-blue);
+        margin-bottom: 4px;
+      }
+
+      .platform-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: var(--deep-blue);
+      }
+
+      /* GALLERY SECTION (WHITE BAND) */
+
+      .gallery-layout {
+        margin-top: 18px;
+      }
+
+      .gallery-main {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--border-soft);
+        background: #000;
+        height: 260px;
+        cursor: pointer;
+      }
+
+      .gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery-thumbs {
+        margin-top: 12px;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .gallery-thumb {
+        border-radius: 10px;
+        overflow: hidden;
+        border: 2px solid transparent;
+        cursor: pointer;
+        opacity: 0.85;
+        transition: border-color 0.15s ease, opacity 0.15s ease,
+          transform 0.15s ease;
+        padding: 0;
+        background: none;
+      }
+
+      .gallery-thumb img {
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery-thumb.active {
+        border-color: var(--red-main);
+        opacity: 1;
+        transform: translateY(-2px);
+      }
+
+      .gallery-caption-row {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 1rem;
+        color: var(--text-muted);
+      }
+
+      /* PROCESS SECTION (BLUE BAND) */
+
+      .process-grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .process-card {
+        border-radius: 16px;
+        border: 1px solid var(--border-soft);
+        background: #ffffff;
+        padding: 14px 12px 16px;
+        font-size: 1rem;
+      }
+
+      .process-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 6px;
+      }
+
+      .process-step {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: #e5efff;
+        color: var(--deep-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .process-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+      }
+
+      /* BOTTOM FORM SECTION */
+
+      .form-bottom-section {
+        background: var(--navy);
+        color: #ffffff;
+        padding: 40px 0 48px;
+      }
+
+      .form-bottom-title {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+
+      .form-bottom-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #e5e7eb;
+      }
+
+      /* FORM OVERLAY */
+
+      .form-overlay {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+      }
+
+      .form-overlay-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.7);
+      }
+
+      .form-overlay-content {
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        max-height: 90vh;
+        margin: 0 12px;
+        background: #ffffff;
+        border-radius: 18px;
+        overflow: auto;
+      }
+
+      .form-overlay-inner {
+        position: relative;
+      }
+
+      .form-close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        border: none;
+        background: #ffffff;
+        border-radius: 999px;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border: 1px solid var(--border-soft);
+      }
+
+      .form-close:hover {
+        background: var(--red-main);
+        color: #ffffff;
+      }
+
+      /* #form-inner {
+        padding: 40px 16px 24px;
+      } */
+
+      /* RESPONSIVE */
+
+      @media (max-width: 960px) {
+        .scissor-hero-inner {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero-image-card {
+          max-width: 460px;
+          margin: 0 auto 20px;
+          order: -1;
+        }
+
+        .hero-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .fit-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .indoor-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .outdoor-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .platform-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .gallery-thumbs {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .process-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page-shell {
+          padding-inline: 12px;
+        }
+
+        .band {
+          padding-block: 32px;
+        }
+
+        .gallery-main {
+          height: 220px;
+        }
+
+        .gallery-thumbs {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .platform-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .process-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <main>
+      <!-- HERO BAND -->
+      <section class="band band-dark">
+        <div class="page-shell scissor-hero">
+          <div class="scissor-hero-inner">
+            <div>
+
+              <div class="section-eyebrow">
+                Scissor lift rentals in Chennai
+              </div>
+              <h1 class="section-title">
+                <span class="hero-title-highlight">Scissor lifts</span> for
+                safe, stable work at height in Chennai.
+              </h1>
+              <p class="section-subtitle">
+                Rent scissor lifts for warehouse, commercial and industrial
+                projects – from low-level indoor platforms to higher units for
+                tall storage and service work.
+              </p>
+
+              <div class="hero-strip">
+                <span class="hero-pill">Indoor electric scissors</span>
+                <span class="hero-pill">Warehouse & logistics work</span>
+                <span class="hero-pill">High-bay storage access</span>
+                <span class="hero-pill">Maintenance & shutdown tasks</span>
+              </div>
+
+              <div class="hero-grid">
+                <div>
+                  <strong>Range of heights for different buildings</strong>
+                  Access platforms that cover typical warehouse heights, medium
+                  commercial floors and higher bays.
+                </div>
+                <div>
+                  <strong>Options for aisles and open floor areas</strong>
+                  Narrow machines for racking aisles and wider units for open
+                  spaces and large halls.
+                </div>
+                <div>
+                  <strong>Indoor and outdoor configurations</strong>
+                  Electric models for finished floors and diesel units for
+                  external or partially prepared surfaces.
+                </div>
+                <div>
+                  <strong>Rental plans matched to your schedule</strong>
+                  Support for short maintenance windows, phased fit-out and
+                  longer running projects.
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <button class="btn-on-dark" onclick="openForm()">
+                  CLICK HERE to start your scissor lift enquiry
+                </button>
+
+              </div>
+
+              <p class="hero-note">
+                A few basic points – location, working height, floor type and
+                how many days you expect to use the lift – are enough for us to
+                suggest suitable scissor lift options.
+              </p>
+            </div>
+
+            <aside class="hero-image-card">
+              <div class="hero-image-main" onclick="openForm()">
+                <img
+                  src="images/scissor-hero-chennai.jpg"
+                  alt="Scissor lift working in a warehouse in Chennai"
+                />
+              </div>
+              <div class="hero-label">SCISSOR LIFTS</div>
+              <div class="hero-image-meta">
+                <div>
+                  Scissor lifts supporting racking, lighting and services work
+                  in Chennai warehouses and commercial buildings.
+                </div>
+                <!-- <div style="text-align: right;">
+                  Chennai · Warehouses · Commercial interiors
+                </div> -->
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHERE SCISSORS FIT BAND (WHITE) -->
+      <section class="band band-white">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Where scissor lifts are most useful
+          </div>
+          <h2 class="section-title">
+            Stable platforms for repeated up-and-down work.
+          </h2>
+          <p class="section-subtitle">
+            Scissor lifts are designed for jobs where your team needs to stand
+            on a level platform, move equipment with them and travel up and down
+            multiple times in a day.
+          </p>
+
+          <div class="fit-layout">
+            <div class="fit-text">
+              <p class="section-text">
+                When your work is mostly vertical – directly above the machine –
+                scissor lifts provide a simple and efficient way to reach
+                height. The platform rails give technicians space to move around
+                with tools, fittings and materials.
+              </p>
+              <p class="section-text">
+                In many sites they replace temporary ladders and basic staging,
+                especially where tasks repeat over several days. The ability to
+                drive the machine at low height also speeds up how crews move
+                between work zones.
+              </p>
+              <p class="section-text">
+                Tell us whether your work is inside a warehouse, in an office
+                fit-out, or on an industrial project. We can then advise whether
+                scissor lifts are appropriate or if another access platform
+                should be considered.
+              </p>
+
+              <div style="margin-top: 24px;">
+                <button class="btn-on-light" onclick="openForm()">
+                  CLICK HERE to check if scissors suit your job
+                </button>
+              </div>
+            </div>
+
+            <div class="fit-grid">
+              <article class="fit-card">
+                <div class="fit-tag">WAREHOUSE & STORAGE</div>
+                <div class="fit-title">Racks, lighting & sprinklers</div>
+                <p class="section-text">
+                  Used for installing and maintaining racking, high-bay lights
+                  and sprinkler lines in warehouses and distribution centres.
+                </p>
+                <p class="fit-note">
+                  Narrow machines help navigate between storage aisles.
+                </p>
+              </article>
+
+              <article class="fit-card">
+                <div class="fit-tag">COMMERCIAL INTERIORS</div>
+                <div class="fit-title">Fit-outs & ceiling services</div>
+                <p class="section-text">
+                  Support for false ceiling work, interior services, atrium
+                  decoration and signage inside malls and office buildings.
+                </p>
+                <p class="fit-note">
+                  Non-marking tyres and electric drives protect finished floors.
+                </p>
+              </article>
+
+              <article class="fit-card">
+                <div class="fit-tag">INDUSTRIAL & UTILITIES</div>
+                <div class="fit-title">Maintenance & minor shutdowns</div>
+                <p class="section-text">
+                  Suitable for maintenance around production areas, utilities
+                  and equipment where a flat working platform is required.
+                </p>
+                <p class="fit-note">
+                  Outdoor units support work on external services and façades.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INDOOR SCISSORS BAND (BLUE) -->
+      <section class="band band-blue">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Indoor scissor lifts
+          </div>
+          <h2 class="section-title">
+            Electric scissor lifts for finished floors and controlled spaces.
+          </h2>
+          <p class="section-subtitle">
+            Electric scissor lifts are preferred in buildings where noise and
+            emissions must be kept low – such as IT parks, commercial interiors
+            and operational warehouses.
+          </p>
+
+          <div class="indoor-layout">
+            <div>
+              <p class="section-text">
+                These lifts are designed to work on finished concrete floors,
+                tiles and other prepared surfaces. Their compact size allows
+                movement through doors, loading areas and internal aisles while
+                keeping turning radius manageable.
+              </p>
+              <p class="section-text">
+                Non-marking tyres can be used in many indoor environments to
+                limit visible tyre marks. Battery operation also reduces exhaust
+                fumes and sound levels inside the building.
+              </p>
+              <p class="section-text">
+                If you share your floor type, available aisle width and height
+                requirement, we can propose electric scissor lift options that
+                match both the work and the building’s constraints.
+              </p>
+
+              <div style="margin-top: 24px;">
+                <button class="btn-on-light" onclick="openForm()">
+                  CLICK HERE to plan an indoor scissor lift
+                </button>
+              </div>
+            </div>
+
+            <div class="image-stack">
+              <div class="image-box" onclick="openForm()">
+                <img
+                  src="images/scissor-indoor-1.jpg"
+                  alt="Indoor scissor lift near racks"
+                />
+              </div>
+              <div class="image-box" onclick="openForm()">
+                <img
+                  src="images/scissor-indoor-2.jpg"
+                  alt="Scissor lift working in commercial interior"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTDOOR / ROUGH-TERRAIN BAND (WHITE) -->
+      <section class="band band-white">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Outdoor & rough-terrain scissors
+          </div>
+          <h2 class="section-title">
+            Platforms for external work and developing ground.
+          </h2>
+          <p class="section-subtitle">
+            Some projects need scissor lifts that can handle unfinished surfaces
+            outside the building – for example, early-phase construction or
+            external services work.
+          </p>
+
+          <div class="outdoor-layout">
+            <div>
+              <p class="section-text">
+                Rough-terrain scissor lifts are built with larger tyres and
+                stronger frames to cope with uneven, partially prepared ground.
+                They are commonly used for façade work, external service
+                installation and temporary access around plant structures.
+              </p>
+              <p class="section-text">
+                These machines often have higher platform capacities, allowing
+                teams to carry extra materials and fittings to the work zone.
+                They are typically diesel-powered and suited to open-air
+                environments.
+              </p>
+              <p class="section-text">
+                Share photos of the approach road, work area and expected
+                working height. We can review whether rough-terrain scissor
+                lifts will be suitable or if another access solution is safer.
+              </p>
+
+              <div style="margin-top: 24px;">
+                <button class="btn-on-light" onclick="openForm()">
+                  CLICK HERE to discuss outdoor <br> scissor lift options
+                </button>
+              </div>
+            </div>
+
+            <aside class="outdoor-panel" onclick="openForm()">
+              <strong>Planning for sites outside core Chennai</strong>
+              <p>
+                For locations beyond the main city and nearby industrial belts,
+                we consider travel distance, ground condition and duration of
+                work before confirming availability of outdoor scissor lifts.
+              </p>
+              <p style="margin-top: 10px;">
+                Where it is practical to support, we share a mobilisation plan
+                that covers reporting times, likely demobilisation and any
+                special arrangements needed for road access and on-site
+                positioning.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLATFORM OPTIONS BAND (BLUE) -->
+      <section class="band band-blue">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Heights & platform configurations
+          </div>
+          <h2 class="section-title">
+            Scissor lift options to match different working levels.
+          </h2>
+          <p class="section-subtitle">
+            We can guide you through platform height, weight capacity and deck
+            extensions so that the chosen lift suits both your work and site
+            conditions.
+          </p>
+
+          <div class="platform-grid">
+            <article class="platform-card">
+              <div class="platform-range">LOW-LEVEL ACCESS</div>
+              <div class="platform-title">Lower heights for regular tasks</div>
+              <p class="section-text">
+                Suitable for smaller warehouses and interiors where working
+                levels are modest but repeated access is required throughout the
+                day.
+              </p>
+            </article>
+
+            <article class="platform-card">
+              <div class="platform-range">TYPICAL WAREHOUSE LEVELS</div>
+              <div class="platform-title">Common storage & services range</div>
+              <p class="section-text">
+                Covers a large portion of racking, lighting and service work in
+                standard warehouse and logistics projects.
+              </p>
+            </article>
+
+            <article class="platform-card">
+              <div class="platform-range">HIGH-BAY APPLICATIONS</div>
+              <div class="platform-title">Tall storage and large halls</div>
+              <p class="section-text">
+                Used where storage and services extend higher, such as
+                high-bay warehouses and larger industrial or commercial spaces.
+              </p>
+            </article>
+
+            <article class="platform-card">
+              <div class="platform-range">WIDER PLATFORMS</div>
+              <div class="platform-title">Extra deck space for teams</div>
+              <p class="section-text">
+                Larger platforms and deck extensions allow teams to work with
+                more materials and tools in a single lift cycle.
+              </p>
+            </article>
+          </div>
+
+          <div style="margin-top: 26px;">
+            <button class="btn-on-light" onclick="openForm()">
+              CLICK HERE to choose a scissor lift configuration
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY BAND (WHITE) -->
+      <section class="band band-white">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Scissor lift snapshots
+          </div>
+          <h2 class="section-title">
+            Examples of scissor lifts working on real sites.
+          </h2>
+          <p class="section-subtitle">
+            These images give a quick sense of how scissor lifts are positioned
+            and used around Chennai warehouses, commercial spaces and industrial
+            projects.
+          </p>
+
+          <div class="gallery-layout">
+            <div
+              class="gallery-main"
+              id="scissorGalleryMain"
+              onclick="openForm()"
+            >
+              <img
+                id="scissorGalleryMainImage"
+                src="images/scissor-gallery-1.jpg"
+                alt="Scissor lift working in a warehouse"
+              />
+            </div>
+
+            <div class="gallery-thumbs" id="scissorGalleryThumbs">
+              <button
+                class="gallery-thumb active"
+                type="button"
+                data-src="images/scissor-gallery-1.jpg"
+                data-caption="Scissor lift used for racking and lighting work inside a warehouse."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/scissor-gallery-1.jpg"
+                  alt="Scissor lift in warehouse"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/scissor-gallery-2.jpg"
+                data-caption="Platform positioned for ceiling and services work in a commercial space."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/scissor-gallery-2.jpg"
+                  alt="Scissor lift in commercial space"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/scissor-gallery-3.jpg"
+                data-caption="Maintenance activity on high-bay lighting using a scissor lift."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/scissor-gallery-3.jpg"
+                  alt="Scissor lift for lighting work"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/scissor-gallery-4.jpg"
+                data-caption="Outdoor scissor lift working near external services on an industrial site."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/scissor-gallery-4.jpg"
+                  alt="Outdoor scissor lift"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/scissor-gallery-5.jpg"
+                data-caption="Compact lift operating in a narrower indoor aisle."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/scissor-gallery-5.jpg"
+                  alt="Compact scissor lift in aisle"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/scissor-gallery-6.jpg"
+                data-caption="Team using platform space for tools and materials during installation work."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/scissor-gallery-6.jpg"
+                  alt="Scissor lift with tools on platform"
+                />
+              </button>
+            </div>
+
+            <div class="gallery-caption-row">
+              <span id="scissorGalleryCaption">
+                Scissor lift used for racking and lighting work inside a
+                warehouse.
+              </span>
+              <span style="text-align: right;">
+                Click any image to change the preview and open the enquiry form.
+              </span>
+            </div>
+          </div>
+
+          <div style="margin-top: 26px;">
+            <button class="btn-on-light" onclick="openForm()">
+              CLICK HERE to request a scissor lift site visit
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS BAND (BLUE) -->
+      <section class="band band-blue">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            How the scissor lift rental works
+          </div>
+          <h2 class="section-title">
+            Simple steps from first enquiry to machine demobilisation.
+          </h2>
+          <p class="section-subtitle">
+            A clear process helps your planning team and site crew know what to
+            expect when booking scissor lifts from Chennai.
+          </p>
+
+          <div class="process-grid">
+            <article class="process-card">
+              <div class="process-head">
+                <div class="process-step">1</div>
+                <div class="process-title">Send core job details</div>
+              </div>
+              <p class="section-text">
+                Share site location, approximate working height, floor type and
+                expected usage duration.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-head">
+                <div class="process-step">2</div>
+                <div class="process-title">We suggest scissor options</div>
+              </div>
+              <p class="section-text">
+                Our team reviews the information and recommends scissor lift
+                sizes and configurations that fit your work.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-head">
+                <div class="process-step">3</div>
+                <div class="process-title">Finalise plan & dates</div>
+              </div>
+              <p class="section-text">
+                Once you decide, we confirm availability, reserve the machines
+                and share tentative reporting times.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-head">
+                <div class="process-step">4</div>
+                <div class="process-title">Reporting and support</div>
+              </div>
+              <p class="section-text">
+                Scissor lifts report to site, basic checks are done and work
+                begins. We remain reachable during working hours for support.
+              </p>
+            </article>
+          </div>
+
+          <div style="margin-top: 26px;">
+            <button class="btn-on-light" onclick="openForm()">
+              CLICK HERE to begin your scissor lift planning
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+   
+
+    <!-- BOTTOM EMBEDDED FORM -->
+    <section class="form-bottom-section">
+      <div class="page-shell">
+        <h2 class="form-bottom-title">
+          Enquiry form for scissor lift rentals from Chennai.
+        </h2>
+        <p class="form-bottom-subtitle">
+          Use the form below to share your scissor lift requirement. Mention
+          location, height, floor type and timing window – we will respond with
+          suitable options and a rental plan.
+        </p>
+
+        <div id="form-bottom-inner"></div>
+      </div>
+    </section>
+
+     <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- FORM OVERLAY -->
+    <div id="form-overlay" class="form-overlay">
+      <div class="form-overlay-backdrop" onclick="closeForm()"></div>
+      <div class="form-overlay-content">
+        <div class="form-overlay-inner">
+          <button class="form-close" type="button" onclick="closeForm()">
+            ×
+          </button>
+          <div id="form-inner"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Load navbar, footer, and embedded form
+      function loadFragment(targetId, url) {
+        var el = document.getElementById(targetId);
+        if (!el) return;
+        fetch(url)
+          .then(function (res) {
+            return res.text();
+          })
+          .then(function (html) {
+            el.innerHTML = html;
+          })
+          .catch(function (err) {
+            console.error("Error loading fragment:", url, err);
+          });
+      }
+
+      loadFragment("navbar", "navbar.html");
+      loadFragment("footer", "footer.html");
+      loadFragment("form-bottom-inner", "form.html");
+
+      // Form overlay logic
+      var formLoaded = false;
+
+      function openForm() {
+        var overlay = document.getElementById("form-overlay");
+        var inner = document.getElementById("form-inner");
+        if (!formLoaded) {
+          fetch("form.html")
+            .then(function (res) {
+              return res.text();
+            })
+            .then(function (html) {
+              inner.innerHTML = html;
+              formLoaded = true;
+              overlay.style.display = "flex";
+            })
+            .catch(function (err) {
+              console.error("Error loading form.html:", err);
+            });
+        } else {
+          overlay.style.display = "flex";
+        }
+      }
+
+      function closeForm() {
+        var overlay = document.getElementById("form-overlay");
+        overlay.style.display = "none";
+      }
+
+      // Gallery behaviour
+      (function setupScissorGallery() {
+        var mainImg = document.getElementById("scissorGalleryMainImage");
+        var captionEl = document.getElementById("scissorGalleryCaption");
+        var thumbsWrap = document.getElementById("scissorGalleryThumbs");
+        if (!mainImg || !captionEl || !thumbsWrap) return;
+
+        var thumbs = thumbsWrap.querySelectorAll(".gallery-thumb");
+        thumbs.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var src = btn.getAttribute("data-src");
+            var caption = btn.getAttribute("data-caption") || "";
+            if (src) mainImg.src = src;
+            captionEl.textContent = caption;
+            thumbs.forEach(function (t) {
+              t.classList.remove("active");
+            });
+            btn.classList.add("active");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

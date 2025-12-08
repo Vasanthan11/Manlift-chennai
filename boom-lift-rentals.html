@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Boom Lift Rentals in Chennai – Articulated & Telescopic Lifts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      :root {
+        --navy: #050e3c;
+        --deep-blue: #002455;
+        --red-main: #dc0000;
+        --red-light: #ff3838;
+        --bg-page: #ffffff;
+        --bg-white: #ffffff;
+        --bg-blue-soft: #e5efff;
+        --border-soft: #d1d5db;
+        --text-main: #111827;
+        --text-muted: #6b7280;
+        --radius-lg: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: var(--bg-page);
+        color: var(--text-main);
+        font-size: 1rem;
+      }
+
+      #navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #ffffff;
+      }
+
+      main {
+        margin: 0;
+        padding: 0 0 64px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
+      }
+
+      .page-shell {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .section-eyebrow {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--red-main);
+        margin-bottom: 0.6rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--deep-blue);
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+        color: var(--text-muted);
+      }
+
+      .section-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-main);
+      }
+
+      /* FULL-WIDTH BANDS */
+
+      .band {
+        width: 100%;
+        padding: 40px 0;
+      }
+
+      .band-dark {
+        background: radial-gradient(circle at top left, #111827, #050e3c);
+        color: #ffffff;
+      }
+
+      .band-white {
+        background: var(--bg-white);
+      }
+
+      .band-blue {
+        background: var(--bg-blue-soft);
+      }
+
+      /* BUTTONS */
+
+      /* On dark background */
+      .btn-on-dark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 12px 24px;
+        border-radius: 999px;
+        border: 1px solid var(--red-main);
+        background: var(--red-main);
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.18s ease, color 0.18s ease;
+      }
+
+      .btn-on-dark:hover {
+        background: #ffffff;
+        color: var(--deep-blue);
+      }
+
+      /* On light / white / blue background */
+      .btn-on-light {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 12px 24px;
+        border-radius: 999px;
+        border: 1px solid var(--deep-blue);
+        background: #ffffff;
+        color: var(--deep-blue);
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.18s ease, color 0.18s ease;
+      }
+
+      .btn-on-light:hover {
+        background: var(--red-main);
+        color: #ffffff;
+      }
+
+      /* HERO */
+
+      .boom-hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .boom-hero-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.1fr);
+        gap: 32px;
+        align-items: center;
+      }
+
+      .hero-breadcrumbs {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+        color: #e5e7eb;
+      }
+
+      .hero-breadcrumbs a {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .band-dark .section-eyebrow {
+        color: #e5e7eb;
+      }
+
+      .band-dark .section-title {
+        color: #ffffff;
+      }
+
+      .band-dark .section-subtitle {
+        color: #d1d5db;
+      }
+
+      .hero-badge-row {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .hero-badge {
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(249, 250, 251, 0.35);
+        font-size: 1rem;
+        color: #e5e7eb;
+        background: rgba(15, 23, 42, 0.7);
+      }
+
+      .hero-grid-points {
+        margin-top: 1.6rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem 1.5rem;
+        font-size: 1rem;
+        color: #e5e7eb;
+      }
+
+      .hero-grid-points strong {
+        display: block;
+        color: #ffffff;
+        margin-bottom: 0.2rem;
+      }
+
+      .hero-actions {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .hero-note {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: #e5e7eb;
+      }
+
+      .hero-image-card {
+        border-radius: 26px;
+        padding: 10px;
+        border: 1px solid rgba(249, 250, 251, 0.4);
+        background: #020617;
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero-image-main {
+        border-radius: 20px;
+        overflow: hidden;
+        height: 660px;
+        cursor: pointer;
+      }
+
+      .hero-image-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .hero-image-meta {
+        margin-top: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1rem;
+        color: #e5e7eb;
+      }
+
+      .hero-image-badge {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(249, 250, 251, 0.7);
+        color: #ffffff;
+      }
+
+      /* FLEET / TYPES */
+
+      .fleet-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+        gap: 28px;
+        margin-top: 18px;
+        align-items: flex-start;
+      }
+
+      .fleet-intro {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .fleet-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .fleet-card {
+        border-radius: 16px;
+        border: 1px solid var(--border-soft);
+        background: #ffffff;
+        padding: 14px 12px 16px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .fleet-image {
+        border-radius: 12px;
+        overflow: hidden;
+        background: #e5e7eb;
+        height: 150px;
+        cursor: pointer;
+      }
+
+      .fleet-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .fleet-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+        margin-bottom: 4px;
+      }
+
+      .fleet-line {
+        font-size: 1rem;
+        color: var(--text-muted);
+        margin-bottom: 6px;
+      }
+
+      /* USE CASES */
+
+      .use-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 28px;
+        margin-top: 18px;
+      }
+
+      .use-list {
+        margin-top: 10px;
+      }
+
+      .use-list ul {
+        padding-left: 20px;
+      }
+
+      .use-list li {
+        margin-bottom: 6px;
+        font-size: 1rem;
+      }
+
+      .use-image-stack {
+        display: grid;
+        gap: 12px;
+      }
+
+      .use-image {
+        border-radius: 14px;
+        overflow: hidden;
+        background: #e5e7eb;
+        height: 180px;
+        cursor: pointer;
+      }
+
+      .use-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* SERVICE AREAS */
+
+      .areas-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        gap: 24px;
+        margin-top: 18px;
+      }
+
+      .areas-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .area-tag {
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: #e5efff;
+        border: 1px solid #c7d2fe;
+        font-size: 1rem;
+        color: var(--deep-blue);
+      }
+
+      .areas-panel {
+        border-radius: 18px;
+        padding: 16px 14px;
+        background-image:
+          linear-gradient(to bottom, rgba(5, 14, 60, 0.8), rgba(0, 0, 0, 0.9)),
+          url("images/boom-outstation-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(248, 250, 252, 0.7);
+        font-size: 1rem;
+        color: #f9fafb;
+      }
+
+      /* SAFETY & SUPPORT */
+
+      .safety-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 24px;
+        margin-top: 18px;
+      }
+
+      .safety-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 18px;
+      }
+
+      .safety-item {
+        display: flex;
+        gap: 10px;
+        font-size: 1rem;
+      }
+
+      .icon-flat {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: #e5efff;
+        border: 1px solid #c7d2fe;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+      }
+
+      .safety-note {
+        border-radius: 18px;
+        padding: 16px 14px;
+        background-image:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.85)),
+          url("images/boom-safety-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(248, 250, 252, 0.7);
+        font-size: 1rem;
+        color: #f9fafb;
+      }
+
+      /* GALLERY SECTION */
+
+      .gallery-layout {
+        margin-top: 18px;
+      }
+
+      .gallery-main {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--border-soft);
+        background: #000000;
+        height: 260px;
+        cursor: pointer;
+      }
+
+      .gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .gallery-thumbs {
+        margin-top: 12px;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .gallery-thumb {
+        border-radius: 10px;
+        overflow: hidden;
+        border: 2px solid transparent;
+        cursor: pointer;
+        opacity: 0.85;
+        transition: border-color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+        padding: 0;
+        background: none;
+      }
+
+      .gallery-thumb img {
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery-thumb.active {
+        border-color: var(--red-main);
+        opacity: 1;
+        transform: translateY(-2px);
+      }
+
+      .gallery-caption-row {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 1rem;
+        color: var(--text-muted);
+      }
+
+      /* PROCESS / HOW IT WORKS */
+
+      .process-grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .process-card {
+        border-radius: 16px;
+        border: 1px solid var(--border-soft);
+        background: #ffffff;
+        padding: 14px 12px 16px;
+        font-size: 1rem;
+      }
+
+      .process-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 6px;
+      }
+
+      .process-step {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: #e5efff;
+        color: var(--deep-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .process-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--deep-blue);
+      }
+
+      /* BOTTOM FORM SECTION */
+
+      .form-bottom-section {
+        background: var(--navy);
+        color: #ffffff;
+        padding: 40px 0 48px;
+      }
+
+      .form-bottom-title {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+
+      .form-bottom-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #e5e7eb;
+      }
+
+      /* FORM OVERLAY */
+
+      .form-overlay {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+      }
+
+      .form-overlay-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.7);
+      }
+
+      .form-overlay-content {
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        max-height: 90vh;
+        margin: 0 12px;
+        background: #ffffff;
+        border-radius: 18px;
+        overflow: auto;
+      }
+
+      .form-overlay-inner {
+        position: relative;
+      }
+
+      .form-close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        border: none;
+        background: #ffffff;
+        border-radius: 999px;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border: 1px solid var(--border-soft);
+      }
+
+      .form-close:hover {
+        background: var(--red-main);
+        color: #ffffff;
+      }
+
+      /* #form-inner {
+        padding: 40px 16px 24px;
+      } */
+
+      /* RESPONSIVE */
+
+      @media (max-width: 960px) {
+        .boom-hero-inner {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero-image-card {
+          max-width: 460px;
+          margin: 0 auto 20px;
+          order: -1;
+        }
+
+        .hero-grid-points {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .fleet-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .fleet-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .use-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .areas-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .safety-layout {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .gallery-thumbs {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .process-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page-shell {
+          padding-inline: 12px;
+        }
+
+        .band {
+          padding-block: 32px;
+        }
+
+        .gallery-main {
+          height: 220px;
+        }
+
+        .gallery-thumbs {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .process-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .safety-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <main>
+      <!-- HERO BAND -->
+      <section class="band band-dark">
+        <div class="page-shell boom-hero">
+          <div class="boom-hero-inner">
+            <div>
+
+              <div class="section-eyebrow">
+                Boom lift rentals in Chennai
+              </div>
+              <h1 class="section-title">
+                Articulated & telescopic boom lifts for safe work at height.
+              </h1>
+              <p class="section-subtitle">
+                Rent boom lifts with reliable support for façade work,
+                maintenance, industrial shutdowns and infrastructure projects
+                across Chennai and nearby industrial belts.
+              </p>
+
+              <div class="hero-badge-row">
+                <span class="hero-badge">Articulated & straight booms</span>
+                <span class="hero-badge">Short & long duration rentals</span>
+                <span class="hero-badge">Operator support available</span>
+              </div>
+
+              <div class="hero-grid-points">
+                <div>
+                  <strong>Working heights from mid to high levels</strong>
+                  Options suitable for typical commercial buildings up to larger
+                  industrial structures and plant equipment.
+                </div>
+                <div>
+                  <strong>Indoor & outdoor configurations</strong>
+                   Diesel variants to suit IT parks, factories,
+                  warehouses and open construction sites.
+                </div>
+                <div>
+                  <strong>Assistance with selection</strong>
+                  Share your height, outreach and ground conditions; we’ll
+                  suggest practical boom lift choices for your job.
+                </div>
+                <div>
+                  <strong>Rental plans aligned to your schedule</strong>
+                  Daily, weekly or project-based plans that align with shutdown
+                  windows and construction milestones.
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <button class="btn-on-dark" onclick="openForm()">
+                  CLICK HERE to send your boom lift enquiry
+                </button>
+              </div>
+
+              <p class="hero-note">
+                Even if your drawings are still evolving, a basic description of
+                height, work zone and site surface is enough for us to start
+                advising on boom lift options.
+              </p>
+            </div>
+
+            <aside class="hero-image-card">
+              <div class="hero-image-main" onclick="openForm()">
+                <img
+                  src="images/boom-hero-chennai.jpg"
+                  alt="Boom lift working on a building in Chennai"
+                />
+              </div>
+              <div class="hero-image-meta">
+                <div>
+                  Boom lifts used for glass, cladding and service access on
+                  multi-level buildings in Chennai.
+                </div>
+        
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLEET / TYPES BAND (WHITE) -->
+      <section class="band band-white">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Selecting the right boom
+          </div>
+          <h2 class="section-title">
+            Different boom lift configurations for different site conditions.
+          </h2>
+          <p class="section-subtitle">
+            We look at your height, outreach, access path and ground surface
+            before suggesting articulated or telescopic booms, so the machine
+            fits the job instead of forcing the job to fit the machine.
+          </p>
+
+          <div class="fleet-layout">
+            <div class="fleet-intro">
+              <p class="section-text">
+                Articulated boom lifts are helpful when you have to rise up and
+                then move over an obstruction – such as canopies, ducts or
+                projecting structures. They give flexibility where the work
+                point is not directly above the base of the machine.
+              </p>
+              <p class="section-text">
+                Telescopic booms are used when long, straight reach is more
+                important – for example, when working along the side of a tall
+                industrial building, pipe rack or bridge. These machines are
+                often deployed on large, open sites with clear travel paths.
+              </p>
+              <p class="section-text">
+                If you share the approximate working height, distance from the
+                work area and a note on the ground surface, our team can
+                recommend which boom style and size will be realistic for your
+                project.
+              </p>
+
+              <div style="margin-top: 22px;">
+                <button class="btn-on-light" onclick="openForm()">
+                  CLICK HERE to compare boom lift options
+                </button>
+              </div>
+            </div>
+
+            <div class="fleet-grid">
+              <article class="fleet-card">
+                <div class="fleet-image" onclick="openForm()">
+                  <img
+                    src="images/boom-articulated.jpg"
+                    alt="Articulated boom lift on site"
+                  />
+                </div>
+                <div>
+                  <div class="fleet-title">Articulated boom lifts</div>
+                  <div class="fleet-line">
+                    Useful where you need to reach over canopies, equipment or
+                    other structures to get to the work area.
+                  </div>
+                  <p class="section-text">
+                    Commonly used in plants, atriums, commercial complexes and
+                    sites with ducting or steel that stands between the base
+                    position and the actual work point.
+                  </p>
+                </div>
+              </article>
+
+              <article class="fleet-card">
+                <div class="fleet-image" onclick="openForm()">
+                  <img
+                    src="images/boom-telescopic.jpg"
+                    alt="Telescopic boom lift working at height"
+                  />
+                </div>
+                <div>
+                  <div class="fleet-title">Telescopic boom lifts</div>
+                  <div class="fleet-line">
+                    Straight booms for long outreach when you have open ground
+                    and clear approach routes.
+                  </div>
+                  <p class="section-text">
+                    Often deployed on industrial buildings, warehouses, pipe
+                    corridors and infrastructure where the machine can stand
+                    further away from the work face.
+                  </p>
+                </div>
+              </article>
+
+              <!-- <article class="fleet-card">
+                <div class="fleet-image" onclick="openForm()">
+                  <img
+                    src="images/boom-electric.jpg"
+                    alt="Electric boom lift indoors"
+                  />
+                </div>
+                <div>
+                  <div class="fleet-title">hybrid boom lifts</div>
+                  <div class="fleet-line">
+                    Suitable for indoor spaces or areas where emissions and
+                    noise have to be controlled.
+                  </div>
+                  <p class="section-text">
+                    Used in IT buildings, commercial interiors and plants that
+                    require quieter operation and reduced exhaust near occupied
+                    areas.
+                  </p>
+                </div>
+              </article> -->
+
+              <!-- <article class="fleet-card">
+                <div class="fleet-image" onclick="openForm()">
+                  <img
+                    src="images/boom-rough-terrain.jpg"
+                    alt="Rough terrain boom lift"
+                  />
+                </div>
+                <div>
+                  <div class="fleet-title">Rough terrain booms</div>
+                  <div class="fleet-line">
+                    Designed for uneven, developing ground in early-stage
+                    construction and infrastructure projects.
+                  </div>
+                  <p class="section-text">
+                    Provide better traction and clearance where roads are not
+                    yet prepared and work zones are still being developed.
+                  </p>
+                </div>
+              </article> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- USE CASES BAND (BLUE) -->
+      <section class="band band-blue">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Typical boom lift applications
+          </div>
+          <h2 class="section-title">
+            Where boom lifts are commonly used in Chennai projects.
+          </h2>
+          <p class="section-subtitle">
+            Our boom lifts support construction, maintenance and services teams
+            across a range of sectors – from IT parks and factories to
+            warehouses and public infrastructure.
+          </p>
+
+          <div class="use-layout">
+            <div>
+              <p class="section-text">
+                Boom lifts help you reach areas that are difficult to access
+                with ladders or basic scaffolding, especially when you need
+                outreach away from the base of the machine. They are routinely
+                used for façade works, services at height and temporary access
+                in industrial areas.
+              </p>
+
+              <div class="use-list">
+                <ul>
+                  <li>
+                    Façade glass, cladding, sealant and cleaning activities on
+                    multi-storey buildings.
+                  </li>
+                  <li>
+                    Mechanical, electrical and piping tasks along external faces
+                    and high structures.
+                  </li>
+                  <li>
+                    Signage, hoarding and lighting installations where work
+                    points are spaced apart.
+                  </li>
+                  <li>
+                    Maintenance work during plant shutdowns in congested
+                    industrial layouts.
+                  </li>
+                  <li>
+                    Access for inspection teams during structural or condition
+                    surveys.
+                  </li>
+                </ul>
+              </div>
+
+              <p class="section-text">
+                Share a short note describing your activity, approximate height
+                and how far the work point is from where the machine can stand.
+                We can then suggest a suitable boom configuration and tentative
+                rental duration.
+              </p>
+
+              <div style="margin-top: 22px;">
+                <button class="btn-on-light" onclick="openForm()">
+                  CLICK HERE to describe your boom lift job
+                </button>
+              </div>
+            </div>
+
+            <div class="use-image-stack">
+              <div class="use-image" onclick="openForm()">
+                <img
+                  src="images/boom-use-facade.jpg"
+                  alt="Boom lift for façade activity"
+                />
+              </div>
+              <div class="use-image" onclick="openForm()">
+                <img
+                  src="images/boom-use-industrial.jpg"
+                  alt="Boom lift in industrial plant"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE AREAS BAND (WHITE) -->
+      <!-- <section class="band band-white">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Coverage from Chennai
+          </div>
+          <h2 class="section-title">
+            Locations and industrial belts supported by our boom lifts.
+          </h2>
+          <p class="section-subtitle">
+            Boom lifts are mobilised from Chennai to city projects and nearby
+            industrial corridors, with planning around travel, reporting windows
+            and site access rules.
+          </p>
+
+          <div class="areas-layout">
+            <div>
+              <p class="section-text">
+                Projects within the city core, along coastal corridors and in
+                industrial clusters around Chennai can usually be supported from
+                the same base. For each job, we review access roads, reporting
+                times and basic gate requirements before confirming mobilisation.
+              </p>
+              <p class="section-text">
+                Your project team receives a tentative reporting schedule, along
+                with any information required from your side to ensure smooth
+                entry and positioning on site.
+              </p>
+
+              <div class="areas-tags">
+                <span class="area-tag">OMR & ECR corridors</span>
+                <span class="area-tag">Guindy & Ekkatuthangal</span>
+                <span class="area-tag">Ambattur & Padi</span>
+                <span class="area-tag">Sriperumbudur</span>
+                <span class="area-tag">Oragadam</span>
+                <span class="area-tag">Ennore & port belt</span>
+                <span class="area-tag">Gummidipoondi region</span>
+              </div>
+
+              <div style="margin-top: 24px;">
+                <button class="btn-on-light" onclick="openForm()">
+                  CLICK HERE to confirm support for your site
+                </button>
+              </div>
+            </div>
+
+            <aside class="areas-panel">
+              <p>
+                For outstation projects beyond the usual Chennai belt, we look
+                at distance, travel time and expected duration of work before
+                committing a boom lift.
+              </p>
+              <p style="margin-top: 10px;">
+                When it is practical to support, we share a mobilisation plan
+                that includes reporting time, tentative demobilisation, and any
+                special arrangements required for travel and site access.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- SAFETY & SUPPORT BAND (BLUE) -->
+      <!-- <section class="band band-blue">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Safety & machine care
+          </div>
+          <h2 class="section-title">
+            Preparing boom lifts to work safely on your site.
+          </h2>
+          <p class="section-subtitle">
+            Machines are checked before dispatch and our team stays available
+            during working hours to respond to basic operating queries and
+            minor issues on active rentals.
+          </p>
+
+          <div class="safety-layout">
+            <div>
+              <p class="section-text">
+                Each boom lift goes through visual and functional checks before
+                leaving the yard, including controls, safety systems and key
+                functions. Operators are briefed on the intended work location
+                and any specific site practices that have been shared.
+              </p>
+              <p class="section-text">
+                Where jobs run for several weeks, we can plan short visits or
+                calls to review machine performance and ensure that operating
+                routines are being followed correctly.
+              </p>
+
+              <div class="safety-grid">
+                <div class="safety-item">
+                  <div class="icon-flat">🛠️</div>
+                  <div>
+                    Pre-dispatch checks aimed at reducing unexpected stoppages
+                    once the boom lift is at your site.
+                  </div>
+                </div>
+                <div class="safety-item">
+                  <div class="icon-flat">📄</div>
+                  <div>
+                    Basic machine details that can be shared with your safety or
+                    administration team for records.
+                  </div>
+                </div>
+                <div class="safety-item">
+                  <div class="icon-flat">👷</div>
+                  <div>
+                    Operators familiar with industrial premises, gate passes and
+                    site inductions.
+                  </div>
+                </div>
+                <div class="safety-item">
+                  <div class="icon-flat">☎️</div>
+                  <div>
+                    Contact during working hours to address operational doubts or
+                    minor issues on running jobs.
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 24px;">
+                <button class="btn-on-light" onclick="openForm()">
+                  CLICK HERE to discuss boom lift safety on your site
+                </button>
+              </div>
+            </div>
+
+            <aside class="safety-note">
+              <p>
+                If your organisation follows specific safety procedures, checklists
+                or induction steps, share them with your enquiry. Wherever
+                possible, we align machine reporting, operator instructions and
+                basic documentation so that the boom lift fits smoothly into
+                your existing safety framework.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- GALLERY BAND (WHITE) -->
+      <section class="band band-white">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            Boom lift snapshots
+          </div>
+          <h2 class="section-title">
+            How boom lifts are typically deployed in the field.
+          </h2>
+          <p class="section-subtitle">
+            The images below show boom lifts supporting real projects – giving a
+            sense of working positions, outreach and typical site conditions
+            where these machines are used.
+          </p>
+
+          <div class="gallery-layout">
+            <div
+              class="gallery-main"
+              id="boomGalleryMain"
+              onclick="openForm()"
+            >
+              <img
+                src="images/boom-gallery-1.jpg"
+                alt="Boom lift on building façade"
+                id="boomGalleryMainImage"
+              />
+            </div>
+
+            <div class="gallery-thumbs" id="boomGalleryThumbs">
+              <button
+                class="gallery-thumb active"
+                type="button"
+                data-src="images/boom-gallery-1.jpg"
+                data-caption="Boom lift used for façade access along a multi-storey commercial building."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/boom-gallery-1.jpg"
+                  alt="Boom lift façade access"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/boom-gallery-2.jpg"
+                data-caption="Telescopic boom reaching over open ground in an industrial layout."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/boom-gallery-2.jpg"
+                  alt="Boom lift in industrial site"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/boom-gallery-3.jpg"
+                data-caption="Boom lift positioned for work around pipe racks and external services."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/boom-gallery-3.jpg"
+                  alt="Boom lift near pipe racks"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/boom-gallery-4.jpg"
+                data-caption="Night-time boom lift deployment for time-sensitive work windows."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/boom-gallery-4.jpg"
+                  alt="Boom lift at night"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/boom-gallery-5.jpg"
+                data-caption="Boom lift being used for external maintenance along a plant structure."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/boom-gallery-5.jpg"
+                  alt="Boom lift for plant maintenance"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-src="images/boom-gallery-6.jpg"
+                data-caption="Boom lift assisting with inspection and condition survey activities."
+                onclick="openForm()"
+              >
+                <img
+                  src="images/boom-gallery-6.jpg"
+                  alt="Boom lift for inspection work"
+                />
+              </button>
+            </div>
+
+            <div class="gallery-caption-row">
+              <span id="boomGalleryCaption">
+                Boom lift used for façade access along a multi-storey commercial
+                building.
+              </span>
+              <span style="text-align: right;">
+                Click any image to change the preview and open the enquiry form.
+              </span>
+            </div>
+          </div>
+
+          <div style="margin-top: 26px;">
+            <button class="btn-on-light" onclick="openForm()">
+              CLICK HERE to request a boom lift site visit
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS BAND (BLUE) -->
+      <section class="band band-blue">
+        <div class="page-shell">
+          <div class="section-eyebrow">
+            How the rental works
+          </div>
+          <h2 class="section-title">
+            Simple steps from enquiry to boom lift demobilisation.
+          </h2>
+          <p class="section-subtitle">
+            A clear sequence keeps planning straightforward for your team and
+            ours. The steps below show how a typical boom lift rental progresses
+            from first contact to completion.
+          </p>
+
+          <div class="process-grid">
+            <article class="process-card">
+              <div class="process-head">
+                <div class="process-step">1</div>
+                <div class="process-title">Share basic details</div>
+              </div>
+              <p class="section-text">
+                Provide location, approximate height, a short job description and
+                expected duration for your Chennai project.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-head">
+                <div class="process-step">2</div>
+                <div class="process-title">We suggest booms</div>
+              </div>
+              <p class="section-text">
+                Our team reviews the information and suggests articulated or
+                telescopic boom options along with rental structure.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-head">
+                <div class="process-step">3</div>
+                <div class="process-title">Confirm & schedule</div>
+              </div>
+              <p class="section-text">
+                Once you select an option, we confirm availability, reserve the
+                machine and share a tentative reporting plan.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-head">
+                <div class="process-step">4</div>
+                <div class="process-title">Reporting & support</div>
+              </div>
+              <p class="section-text">
+                The boom lift reports to site, basic checks are completed and
+                work begins. We stay available during working hours for
+                questions or support.
+              </p>
+            </article>
+          </div>
+
+          <div style="margin-top: 26px;">
+            <button class="btn-on-light" onclick="openForm()">
+              CLICK HERE to begin your boom lift planning
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+   
+
+    <!-- BOTTOM EMBEDDED FORM (FULL BLUE BACKGROUND) -->
+    <section class="form-bottom-section">
+      <div class="page-shell">
+        <h2 class="form-bottom-title">
+          Enquiry form for boom lift rentals from Chennai.
+        </h2>
+        <p class="form-bottom-subtitle">
+          Use the form below to share your boom lift requirement. Include site
+          location, approximate working height, type of activity and tentative
+          dates. We will respond with suitable options and a clear rental plan.
+        </p>
+
+        <div id="form-bottom-inner"></div>
+      </div>
+    </section>
+
+     <!-- FOOTER -->
+    <div id="footer"></div>
+    <!-- FORM OVERLAY -->
+    <div id="form-overlay" class="form-overlay">
+      <div class="form-overlay-backdrop" onclick="closeForm()"></div>
+      <div class="form-overlay-content">
+        <div class="form-overlay-inner">
+          <button class="form-close" type="button" onclick="closeForm()">
+            ×
+          </button>
+          <div id="form-inner"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Load navbar, footer, and embedded form
+      function loadFragment(targetId, url) {
+        var el = document.getElementById(targetId);
+        if (!el) return;
+        fetch(url)
+          .then(function (res) {
+            return res.text();
+          })
+          .then(function (html) {
+            el.innerHTML = html;
+          })
+          .catch(function (err) {
+            console.error("Error loading fragment:", url, err);
+          });
+      }
+
+      loadFragment("navbar", "navbar.html");
+      loadFragment("footer", "footer.html");
+      loadFragment("form-bottom-inner", "form.html");
+
+      // Form overlay logic
+      var formLoaded = false;
+
+      function openForm() {
+        var overlay = document.getElementById("form-overlay");
+        var inner = document.getElementById("form-inner");
+        if (!formLoaded) {
+          fetch("form.html")
+            .then(function (res) {
+              return res.text();
+            })
+            .then(function (html) {
+              inner.innerHTML = html;
+              formLoaded = true;
+              overlay.style.display = "flex";
+            })
+            .catch(function (err) {
+              console.error("Error loading form.html:", err);
+            });
+        } else {
+          overlay.style.display = "flex";
+        }
+      }
+
+      function closeForm() {
+        var overlay = document.getElementById("form-overlay");
+        overlay.style.display = "none";
+      }
+
+      // Gallery behaviour (change image + caption, still opens form on click)
+      (function setupBoomGallery() {
+        var mainImg = document.getElementById("boomGalleryMainImage");
+        var captionEl = document.getElementById("boomGalleryCaption");
+        var thumbsWrap = document.getElementById("boomGalleryThumbs");
+        if (!mainImg || !captionEl || !thumbsWrap) return;
+
+        var thumbs = thumbsWrap.querySelectorAll(".gallery-thumb");
+        thumbs.forEach(function (btn) {
+          btn.addEventListener("click", function (e) {
+            var src = btn.getAttribute("data-src");
+            var caption = btn.getAttribute("data-caption") || "";
+            if (src) mainImg.src = src;
+            captionEl.textContent = caption;
+            thumbs.forEach(function (t) {
+              t.classList.remove("active");
+            });
+            btn.classList.add("active");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
